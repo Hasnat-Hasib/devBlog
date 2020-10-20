@@ -9,7 +9,7 @@ import {
     CLEAR_PROFILE,
   } from './types'; 
 
-// Get Current user
+// Get Current users Profile
 
 export const getCurrentProfile = () => async dispatch => {
     try {
@@ -21,7 +21,7 @@ export const getCurrentProfile = () => async dispatch => {
     } catch (err) {
         dispatch({
             type: PROFILE_ERROR,
-             payload: {msg: err.response.statusText, status: err.response.status}
+            payload: {msg: err.response.statusText, status: err.response.status}
         });
     }
 };
